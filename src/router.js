@@ -9,7 +9,7 @@ import UsuarioEditar from './components/usuario/UsuarioEditar'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     mode:'history',
     routes:[{
         name:'inicio',
@@ -37,3 +37,7 @@ export default new Router({
     }
     ]
 })
+
+router.beforeEac
+
+export default router

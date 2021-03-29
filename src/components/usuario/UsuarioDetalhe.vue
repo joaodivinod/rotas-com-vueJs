@@ -1,8 +1,11 @@
 <template>
     <div class="usuario-detalhe">
         <h3>Usuário Detalhe</h3>
-        <button sucesso @click="irParaInicio">Voltar</button>
         <p><strong>Código:{{ id }}</strong></p>
+
+        <router-link tag="button" primario :to="`/usuario/${$route.params.id}/editar`">
+            Editar
+        </router-link>
     </div>
 </template>
 

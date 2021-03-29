@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Inicio from './components/inicio'
 
-import Usuario from './components/usuario/usuario'
+import Usuario from './components/usuario/Usuario'
 import UsuarioLista from './components/usuario/UsuarioLista'
 import UsuarioDetalhe from './components/usuario/UsuarioDetalhe'
 import UsuarioEditar from './components/usuario/UsuarioEditar'
@@ -12,6 +12,7 @@ Vue.use(Router)
 export default new Router({
     mode:'history',
     routes:[{
+        name:'inicio',
         path: '/',
         component:Inicio
     },{
@@ -21,7 +22,7 @@ export default new Router({
       children:[
           {path:'',component: UsuarioLista},
           {path:':id',component: UsuarioDetalhe},
-          {path:':id/editar',component: UsuarioEditar, props:true},
+          {path:':id/editar',component: UsuarioEditar, props:true, name:'editarUsuario'},
       ]
     }
     ]

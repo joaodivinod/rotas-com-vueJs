@@ -4,6 +4,9 @@
         <p><strong>Código: </strong>{{ id }} / {{ $route.params.id }}</p>
         <p><strong>Completo: </strong>{{ $route.query.completo ? 'Sim':'Não' }}</p>
         <p><strong>Lingua: </strong>{{$route.query.lingua}}</p>
+        <div id="rodape">
+            <h3>Curso VueJs</h3>
+        </div>
     </div>
 </template>
 
@@ -15,5 +18,7 @@ export default {
 </script>
 
 <style scoped>
-
+    #rodape{
+        margin-top: 100vh;
+    }
 </style>
